@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Vietnamese Iced Coffee",
+    "price": 4,
+    "rating": 4.9,
+    "img": "https://i.imgur.com/GvQDucC.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Jasmine Tea",
+    "price": 2,
+    "rating": 4.7,
+    "img": "https://i.imgur.com/X8P1gL7.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Soy Milk",
+    "price": 2,
+    "rating": 4.3,
+    "img": "https://i.imgur.com/bUhjRxd.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Bubble Tea",
+    "price": 2,
+    "rating": 4.7,
+    "img": "https://i.imgur.com/4TOiN18.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Matcha Milk Tea",
+    "price": 2,
+    "rating": 4.8,
+    "img": "https://i.imgur.com/NwRcdoV.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Longan Drink",
+    "price": 2,
+    "rating": 4.8,
+    "img": "https://i.imgur.com/qC8dY9l.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Coke",
+    "price": 1,
+    "rating": 4.2,
+    "img": "https://i.imgur.com/yvyVtdY.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Sprite",
+    "price": 1,
+    "rating": 4.2,
+    "img": "https://i.imgur.com/0izroQc.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Pepsi",
+    "price": 1,
+    "rating": 4.1,
+    "img": "https://i.imgur.com/WMnIXp8.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Root Beer",
+    "price": 1,
+    "rating": 4.6,
+    "img": "https://i.imgur.com/Gq7GvDY.jpeg",
+    "__v": 0
+  }
+ 
+]

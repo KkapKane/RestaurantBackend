@@ -1,0 +1,167 @@
+[
+  {
+    "name": "House Special Pho",
+    "native_name" : "Phở Đặc Biệt",
+    "description": "slow-simmered broth, prepared with beef bones, served with rice noodles, protein (such as beef, chicken or plant-based protein) and other various toppings",
+    "type" : "entree",
+    "sub_cat": "pho",
+    "price": 16,
+    "rating": 4.9,
+    "img": "https://i.imgur.com/ZMYyUFz.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Rare Beef Pho",
+    "native_name": "Phở Tái",
+    "description": "Vietnamese soup that's made with rare beef and rice noodles such as vermicelli. It features a delicious broth, and is typically served with fresh cilantro, scallions, basil, and bean sprouts.",
+    "type": "entree",
+    "sub_cat": "pho",
+    "price": 13,
+    "rating": 4.4,
+    "img": "https://i.imgur.com/yDV0rHy.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "MeatBall Pho",
+    "native_name": "Phở Bò viên",
+    "description": "Ground beef and seasonings that have been churned into a paste, and formed into round balls, similar to fish balls. Served in slow-simmered beef broth",
+    "type": "entree",
+    "sub_cat": "pho",
+    "price": 13,
+    "rating": 4.2,
+    "img": "https://i.imgur.com/JSIw1YU.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Seafood Pho",
+    "native_name": "Phở Hải Sản",
+    "description": "Broth made with chicken bones and seafood, which give it a slightly sweet flavor. The ingredients include shrimp, clams, squid, onions, noodles, mushrooms, and coriander.",
+    "type": "entree",
+    "sub_cat": "pho",
+    "price": 16,
+    "rating": 4.3,
+    "img": "https://i.imgur.com/TfWCitB.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Chicken Pho",
+    "native_name": "Phở Gà",
+    "description": "Lighter and clearer broth. Ingredients include ginger, fish sauce, rice noodles, shallots, green onions, and cilantro. Garnishes include lime wedges, mint, sliced chili peppers, bean sprouts, and Thai basil sprigs. ",
+    "type": "entree",
+    "sub_cat": "pho",
+    "price": 13,
+    "rating": 4.8,
+    "img": "https://i.imgur.com/KcjSHGe.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Vegan Pho",
+    "native_name": "Phở Chay",
+    "description": "A vegan twist to the traditional pho. Broth is based on mushrooms, ginger, onions, soy sauce, cloves, cinnamon, coriander seeds, and black cardamom ",
+    "type": "entree",
+    "sub_cat": "pho",
+    "price": 13,
+    "rating": 4.6,
+    "img": "https://i.imgur.com/tbtzgg9.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Well Done Pho",
+    "native_name": "Phở bò tái chín",
+    "description": " A Northern Vietnamese version of phở bò (beef pho). This soup is prepared with well-done (chín) and rare or half-done beef (tái) that's cooked by the broth when served.",
+    "type": "entree",
+    "sub_cat": "Pho",
+    "price": 13,
+    "rating": 4.1,
+    "img": "https://i.imgur.com/LQeVfQ6.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "House Special Noodle Bowl",
+    "native_name": "Bún Thịt Nướng",
+    "description": "Grilled or barbecued meat (beef, pork, shrimp, and chicken) with 2 eggrolls on top of rice vermicelli noodle.",
+    "type": "entree",
+    "sub_cat": "Grilled Noodle Bowl",
+    "price": 16,
+    "rating": 4.9,
+    "img": "https://i.imgur.com/QcGOIhK.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Grilled Pork Noodle Bowl",
+    "native_name": "Bún Heo Nướng",
+    "description": "Grilled or barbecued pork on top of rice vermicelli noodle.",
+    "type": "entree",
+    "sub_cat": "Grilled Noodle Bowl",
+    "price": 13,
+    "rating": 4.7,
+    "img": "https://i.imgur.com/udCg1Ua.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Grilled Shrimp Noodle Bowl",
+    "native_name": "Bún Tôm Nướng",
+    "description": "Grilled or barbecued shrimp on top of rice vermicelli noodle.",
+    "type": "entree",
+    "sub_cat": "Grilled Noodle Bowl",
+    "price": 15,
+    "rating": 4.5,
+    "img": "https://i.imgur.com/dESQdJ8.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Grilled Chicken Noodle Bowl",
+    "native_name": "Bún Gà Nướng",
+    "description": "Grilled or barbecued chicken on top of rice vermicelli noodle.",
+    "type": "entree",
+    "sub_cat": "Grilled Noodle Bowl",
+    "price": 13,
+    "rating": 4.2,
+    "img": "https://i.imgur.com/4o2NO2q.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Vietnamese Egg Rolls",
+    "native_name": "Chã Giò",
+    "description": "A traditional eggroll with a vietnamese spin on it.",
+    "type": "apetizer",
+    "sub_cat": "Rolls",
+    "price": 6,
+    "rating": 4.5,
+    "img": "https://i.imgur.com/ISq7DWF.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Vietnamese Spring Rolls",
+    "native_name": "Bánh Tráng Cuốn",
+    "description": "shrimp and vermicelli noodle wrapped in rice paper.",
+    "type": "apetizer",
+    "sub_cat": "Rolls",
+    "price": 6,
+    "rating": 4.8,
+    "img": "https://i.imgur.com/pcu8z5N.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Vietnamese meat Sandwich",
+    "native_name": "Bánh Mì Thịt Nướng",
+    "description": " Grilled Pork with Lemongrass inbetween bread. Ingredients include pork liver pate, vietnamese mayonnaise, pickled carrots/daiok and cilantro.",
+    "type": "apetizer",
+    "sub_cat": "Bread",
+    "price": 6,
+    "rating": 4.9,
+    "img": "https://i.imgur.com/yqXiX6v.jpeg",
+    "__v": 0
+  },
+  {
+    "name": "Dumplings",
+    "native_name": "Bánh Bao",
+    "description": "Consists of minced meat and finely chopped vegetables wrapped into a piece of dough skin.",
+    "type": "apetizer",
+    "sub_cat": "Dumplings",
+    "price": 6,
+    "rating": 4.2,
+    "img": "https://i.imgur.com/ywjgnPZ.jpeg",
+    "__v": 0
+  }
+]
