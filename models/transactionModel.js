@@ -35,8 +35,8 @@ const transactionSchema = mongoose.Schema({
     type: [order],
   },
   orderDate: {
-    type: DateTime(),
-    required: [true, "No date found"],
+    type: Date,
+    default: Date.now,
   },
 });
 
