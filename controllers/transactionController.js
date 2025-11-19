@@ -24,6 +24,7 @@ const getTransactions = asyncHandler(async (req, res) => {
 // @access Private
 const setTransactions = asyncHandler(async (req, res) => {
   const newTransaction = {
+    _id: transactions.length.toString(),
     customerName: req.body.customerName,
     totalQty: req.body.totalQty,
     totalPrice: req.body.totalPrice,
