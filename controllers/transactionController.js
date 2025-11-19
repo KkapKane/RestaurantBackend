@@ -1,11 +1,21 @@
 const asyncHandler = require("express-async-handler");
-const Transaction = require("../models/transactionModel");
+const fs = require("fs");
+const path = require("path");
+
+const transactionsPath = path.join(__dirname, "../transactions.json");
+
+// Initialize transactions array
+let transactions = [];
+if (fs.existsSync(transactionsPath)) {
+  transactions = JSON.parse(fs.readFileSync(transactionsPath, "utf8"));
+} else {
+  fs.writeFileSync(transactionsPath, JSON.stringify([], null, 2));
+}
 
 // @desc  Get transactions
 // @route  GET restaurant/transactions
 // @access Private
 const getTransactions = asyncHandler(async (req, res) => {
-  const transactions = await Transaction.find();
   res.status(200).json(transactions);
 });
 
@@ -13,46 +23,49 @@ const getTransactions = asyncHandler(async (req, res) => {
 // @route   POST restaurant/transactions
 // @access Private
 const setTransactions = asyncHandler(async (req, res) => {
-  const transactions = await Transaction.create({
+  const newTransaction = {
     customerName: req.body.customerName,
     totalQty: req.body.totalQty,
     totalPrice: req.body.totalPrice,
     order: req.body.order,
-    orderDate: req.body.orderDate,
-  });
+    orderDate: req.body.orderDate || new Date(),
+    __v: 0,
+  };
 
-  res.status(200).json(transactions);
+  transactions.push(newTransaction);
+  fs.writeFileSync(transactionsPath, JSON.stringify(transactions, null, 2));
+  res.status(200).json(newTransaction);
 });
 
 // @desc  Update Transaction
 // @route  PUT restaurant/transactions/{id}
 // @access Private
 const updateTransaction = asyncHandler(async (req, res) => {
-  const transactions = await Transaction.findById(req.params.id);
-  if (!transactions) {
+  const index = parseInt(req.params.id);
+
+  if (index < 0 || index >= transactions.length) {
     res.status(400);
-    throw new Error("food not found");
+    throw new Error("transaction not found");
   }
-  const updatedTransaction = await Transaction.findByIdAndUpdate(
-    req.params.id,
-    req.body,
-    {
-      new: true,
-    }
-  );
-  res.status(200).json(updatedTransaction);
+
+  transactions[index] = { ...transactions[index], ...req.body };
+  fs.writeFileSync(transactionsPath, JSON.stringify(transactions, null, 2));
+  res.status(200).json(transactions[index]);
 });
 
 // @desc  delete Transaction
 // @route  DELETE restaurant/transactions/{id}
 // @access Private
 const deleteTransaction = asyncHandler(async (req, res) => {
-  const transaction = await Transaction.findById(req.params.id);
-  if (!transaction) {
+  const index = parseInt(req.params.id);
+
+  if (index < 0 || index >= transactions.length) {
     res.status(400);
-    throw new Error("food not found");
+    throw new Error("transaction not found");
   }
-  const deletedTransaction = await Transaction.findByIdAndDelete(req.params.id);
+
+  const deletedTransaction = transactions.splice(index, 1)[0];
+  fs.writeFileSync(transactionsPath, JSON.stringify(transactions, null, 2));
   res.status(200).json(deletedTransaction);
 });
 

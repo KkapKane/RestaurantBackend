@@ -1,11 +1,14 @@
 const asyncHandler = require("express-async-handler");
-const Drink = require("../models/drinkModel");
+const fs = require("fs");
+const path = require("path");
+
+const drinksPath = path.join(__dirname, "../drinks.json");
+let drinks = require("../drinks.json");
 
 // @desc   Get Drinks
 // @route  GET restaurant/menu/drinks
 // @access Private
 const getDrinks = asyncHandler(async (req, res) => {
-  const drinks = await Drink.find();
   res.status(200).json(drinks);
 });
 
@@ -13,41 +16,48 @@ const getDrinks = asyncHandler(async (req, res) => {
 // @route  POST restaurant/menu/drinks
 // @access Private
 const setDrinks = asyncHandler(async (req, res) => {
-  const drinks = await Drink.create({
+  const newDrink = {
     name: req.body.name,
     price: req.body.price,
     rating: req.body.rating,
     img: req.body.img,
-  });
+    __v: 0,
+  };
 
-  res.status(200).json(drinks);
+  drinks.push(newDrink);
+  fs.writeFileSync(drinksPath, JSON.stringify(drinks, null, 2));
+  res.status(200).json(newDrink);
 });
 
 // @desc   Update Drink
 // @route  PUT restaurant/menu/drinks/:id
 // @access Private
 const updateDrink = asyncHandler(async (req, res) => {
-  const drink = await Drink.findById(req.params.id);
-  if (!drink) {
+  const index = parseInt(req.params.id);
+
+  if (index < 0 || index >= drinks.length) {
     res.status(400);
     throw new Error("drink not found");
   }
-  const updatedDrink = await Drink.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  });
-  res.status(200).json(updatedDrink);
+
+  drinks[index] = { ...drinks[index], ...req.body };
+  fs.writeFileSync(drinksPath, JSON.stringify(drinks, null, 2));
+  res.status(200).json(drinks[index]);
 });
 
 // @desc   delete Drink
 // @route  DELETE restaurant/menu/drinks/:id
 // @access Private
 const deleteDrink = asyncHandler(async (req, res) => {
-  const drink = await Drink.findById(req.params.id);
-  if (!drink) {
+  const index = parseInt(req.params.id);
+
+  if (index < 0 || index >= drinks.length) {
     res.status(400);
     throw new Error("drink not found");
   }
-  const deletedDrink = await Drink.findByIdAndDelete(req.params.id);
+
+  const deletedDrink = drinks.splice(index, 1)[0];
+  fs.writeFileSync(drinksPath, JSON.stringify(drinks, null, 2));
   res.status(200).json(deletedDrink);
 });
 
